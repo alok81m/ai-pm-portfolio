@@ -12,7 +12,7 @@ Senior Product Manager building hands-on AI fluency: machine learning, Generativ
 | --- | --- | --- | --- | --- | --- |
 | 1 | [Hotel Booking Cancellation Predictor](projects/01-hotel-cancellation/) | Hospitality | Predicts which bookings will cancel and recommends policies to cut revenue loss | KNIME | Week 7 |
 | 2 | [Financial Report Analyzer](projects/02-financial-report-analyzer/) | Finance | RAG assistant that answers analyst questions from a 300-page annual report, with page citations | n8n, Gemini, NotebookLM | Week 11 |
-| 3 | [AI Helpdesk — Multi-Agent Support](projects/03-ai-helpdesk/) | Customer support | Agents classify tickets, retrieve knowledge, draft policy-compliant replies and escalate | n8n, Claude | Week 13 |
+| 3 | [AI Helpdesk — Multi-Agent Support](projects/03-ai-helpdesk/) | Customer support | Specialist agents classify tickets, retrieve knowledge, draft policy-compliant replies and escalate | n8n, Claude, MCP | Week 13 |
 
 ## Practical builds
 
@@ -27,7 +27,8 @@ Senior Product Manager building hands-on AI fluency: machine learning, Generativ
 | 07 | [Loan model fairness audit](practical-builds/07-loan-fairness-audit/) | Responsible AI, bias testing | Week 8 |
 | 08 | [Health-insurance policy assistant](practical-builds/08-insurance-rag-bot/) | RAG | Week 9 |
 | 09 | [Investment assistant evaluation](practical-builds/09-genai-eval-scorecard/) | LLM-as-judge, hallucination checks | Week 10 |
-| 10 | [Inventory replenishment agent](practical-builds/10-inventory-agent/) | Agentic workflows, tool use | Week 12 |
+| 10 | [MCP-connected AI agent](practical-builds/10-mcp-agent/) | Agent tool use via MCP (Model Context Protocol) | Week 12 |
+| 11 | [Multi-agent inventory replenishment](practical-builds/11-inventory-agent/) | Multi-agent design, routing, human-in-the-loop | Week 12 |
 
 ## Product artifacts
 
@@ -37,9 +38,13 @@ Senior Product Manager building hands-on AI fluency: machine learning, Generativ
 | [Responsible-AI launch checklist](pm-artifacts/responsible-ai-checklist.md) | Governance and risk thinking | Week 8 |
 | [GenAI go/no-go criteria](pm-artifacts/genai-launch-criteria.md) | Evaluation-driven launch decisions | Week 10 |
 
+## AI This Week
+
+Every week I track new AI models, tools and launches and write down what they mean for product teams. Highlights are added here as short notes.
+
 ## Skills
 
-Machine learning (clustering, regression, classification, recommenders, forecasting) · Generative AI and prompt engineering · RAG and embeddings · AI evaluation · AI agents and multi-agent design · Responsible AI · AI product strategy
+Machine learning (clustering, regression, classification, recommenders, forecasting) · Generative AI and prompt engineering · RAG and embeddings · AI evaluation · AI agents and multi-agent systems · MCP (Model Context Protocol) · Responsible AI · AI product strategy
 
 ## Contact
 
