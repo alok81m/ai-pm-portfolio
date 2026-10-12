@@ -43,4 +43,4 @@ Machine learning (clustering, regression, classification, recommenders, forecast
 
 ## Contact
 
-LinkedIn: _add link_ · Email: _add email_
+LinkedIn: www.linkedin.com/in/alokmauryain · Email: alok30m@icloud.com
