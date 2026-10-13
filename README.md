@@ -2,7 +2,7 @@
 
 Senior Product Manager building hands-on AI fluency: machine learning, Generative AI, RAG and AI agents, built with no-code tools (KNIME, n8n, Google AI Studio, NotebookLM, Claude) and framed as product decisions.
 
-> 90-day program based on the MIT No Code & Agentic AI curriculum · Oct 2026 – Jan 2027
+> 14-week program based on the MIT No Code & Agentic AI curriculum, plus agent tooling from UT Austin's AI Agents for Business Applications · Oct 2026 – Jan 2027
 
 ---
 
@@ -29,6 +29,7 @@ Senior Product Manager building hands-on AI fluency: machine learning, Generativ
 | 09 | [Investment assistant evaluation](practical-builds/09-genai-eval-scorecard/) | LLM-as-judge, hallucination checks | Week 10 |
 | 10 | [MCP-connected AI agent](practical-builds/10-mcp-agent/) | Agent tool use via MCP (Model Context Protocol) | Week 12 |
 | 11 | [Multi-agent inventory replenishment](practical-builds/11-inventory-agent/) | Multi-agent design, routing, human-in-the-loop | Week 12 |
+| 12 | [Legal document processing agents](practical-builds/12-legal-doc-agents/) | Langflow (LangChain), agent tracing, testing and security | Week 14 |
 
 ## Product artifacts
 
@@ -37,6 +38,7 @@ Senior Product Manager building hands-on AI fluency: machine learning, Generativ
 | [AI feature PRD (capstone)](pm-artifacts/ai-feature-prd.md) | Writing requirements for non-deterministic products | Week 13 |
 | [Responsible-AI launch checklist](pm-artifacts/responsible-ai-checklist.md) | Governance and risk thinking | Week 8 |
 | [GenAI go/no-go criteria](pm-artifacts/genai-launch-criteria.md) | Evaluation-driven launch decisions | Week 10 |
+| [AI agent security checklist](pm-artifacts/agent-security-checklist.md) | Prompt injection, access control, decision logging | Week 14 |
 
 ## AI This Week
 
@@ -44,7 +46,7 @@ Every week I track new AI models, tools and launches and write down what they me
 
 ## Skills
 
-Machine learning (clustering, regression, classification, recommenders, forecasting) · Generative AI and prompt engineering · RAG and embeddings · AI evaluation · AI agents and multi-agent systems · MCP (Model Context Protocol) · Responsible AI · AI product strategy
+Machine learning (clustering, regression, classification, recommenders, forecasting) · Generative AI and prompt engineering · RAG and embeddings · AI evaluation · AI agents and multi-agent systems · MCP (Model Context Protocol) · Langflow / LangChain concepts · Agent testing and security · Responsible AI · AI product strategy
 
 ## Contact
 
