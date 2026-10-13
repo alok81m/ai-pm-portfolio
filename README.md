@@ -42,7 +42,9 @@ Senior Product Manager building hands-on AI fluency: machine learning, Generativ
 
 ## AI This Week
 
-Every week I track new AI models, tools and launches and write down what they mean for product teams. Highlights are added here as short notes.
+Every week I track new AI models, tools and launches and write down what they mean for product teams, then test one new tool hands-on.
+
+- [Tools I've tried](tools-log.md): a weekly log of AI tools tested on real problems, with a verdict on each.
 
 ## Skills
 
