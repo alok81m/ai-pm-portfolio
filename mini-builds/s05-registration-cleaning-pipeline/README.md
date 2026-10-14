@@ -37,6 +37,10 @@ Google Form responses linked to a Google Sheet: timestamp, full name, email, pho
 | "two" in Seats | Caught by n8n's type check; converted to 0 and flagged | Bad input fails loudly or gets flagged, never passes silently |
 | Live 4th form entry | Cleaned and confirmed automatically, no manual step | Runs unattended |
 
+![Sample confirmation email](images/confirmation-email.png)
+
+*Input name was typed as `  RAHUL Sharma  ` and city as `mumbai`; the email shows the cleaned values.*
+
 ## 6. Product decisions I made
 - **Flag instead of delete:** a blank phone or odd seat count is kept and marked, because "missing" can itself be information and deleting it hides problems.
 - **Gate the irreversible action:** emails go out only after validation. In automation, testing an action step does the real action, so the send step is disabled while testing.
@@ -54,6 +58,6 @@ Google Form responses linked to a Google Sheet: timestamp, full name, email, pho
 3. Add a daily summary: entries received, % flagged by type. That's a simple data-quality dashboard.
 
 ## Files
-- `workflow/` — exported n8n workflow (.json)
-- `images/` — workflow screenshot and a sample confirmation email
+- `workflow/` — exported n8n workflow (.json); Google Sheet ID and credential references removed, so set your own sheet and credentials after import
+- `images/` — workflow screenshot and a sample confirmation email (addresses redacted)
 - `data/` — sample (anonymised) test rows

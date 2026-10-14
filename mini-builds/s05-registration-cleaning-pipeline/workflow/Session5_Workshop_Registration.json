@@ -123,14 +123,7 @@
         -96
       ],
       "id": "1f13dd01-d2e9-4f92-be98-2c51b83c275b",
-      "name": "Send a message",
-      "webhookId": "c05637cb-3c0b-4c4e-ae1a-07dc9e7e5f1c",
-      "credentials": {
-        "gmailOAuth2": {
-          "id": "Zr4k3xuBaSAjoDwQ",
-          "name": "Gmail account"
-        }
-      }
+      "name": "Send a message"
     },
     {
       "parameters": {
@@ -143,17 +136,15 @@
         },
         "documentId": {
           "__rl": true,
-          "value": "1DVDoW2vehFBdsc7l8iVJ7sjLBKfskoGNYzYlurNeHT8",
+          "value": "YOUR_GOOGLE_SHEET_ID",
           "mode": "list",
-          "cachedResultName": "Untitled form (Responses)",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DVDoW2vehFBdsc7l8iVJ7sjLBKfskoGNYzYlurNeHT8/edit?usp=drivesdk"
+          "cachedResultName": "Workshop registration (Responses)"
         },
         "sheetName": {
           "__rl": true,
           "value": 877506231,
           "mode": "list",
-          "cachedResultName": "Form Responses 1",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DVDoW2vehFBdsc7l8iVJ7sjLBKfskoGNYzYlurNeHT8/edit#gid=877506231"
+          "cachedResultName": "Form Responses 1"
         },
         "event": "rowAdded",
         "options": {}
@@ -165,13 +156,7 @@
         0
       ],
       "id": "83509c30-42c9-4f5d-b8f2-233bc7be6db7",
-      "name": "Google Sheets Trigger",
-      "credentials": {
-        "googleSheetsTriggerOAuth2Api": {
-          "id": "qprCMLfD2X8mKRDC",
-          "name": "Google Sheets Trigger account"
-        }
-      }
+      "name": "Google Sheets Trigger"
     }
   ],
   "pinData": {},
@@ -210,17 +195,11 @@
       ]
     }
   },
-  "active": true,
+  "active": false,
   "settings": {
     "executionOrder": "v1",
     "binaryMode": "separate"
   },
-  "versionId": "c9d48351-da21-46b5-9b8e-30046d28cd7f",
-  "meta": {
-    "templateCredsSetupCompleted": true,
-    "instanceId": "e85b12aefe8afe0affc6ecd36b4cf76b35b15431e55e475d6466517ce1a4fb6d"
-  },
   "nodeGroups": [],
-  "id": "bYd1iloqIhow389d",
   "tags": []
 }
