@@ -31,6 +31,14 @@ Senior Product Manager building hands-on AI fluency: machine learning, Generativ
 | 11 | [Multi-agent inventory replenishment](practical-builds/11-inventory-agent/) | Multi-agent design, routing, human-in-the-loop | Week 12 |
 | 12 | [Legal document processing agents](practical-builds/12-legal-doc-agents/) | Langflow (LangChain), agent tracing, testing and security | Week 14 |
 
+## Mini builds
+
+Smaller hands-on builds from weekday sessions.
+
+| Session | Build | Skill shown | Tools |
+| --- | --- | --- | --- |
+| 5 | [Self-cleaning registration pipeline](mini-builds/s05-registration-cleaning-pipeline/) | Data cleaning, validation, flagging; first automation | n8n, Google Forms, Sheets, Gmail |
+
 ## Product artifacts
 
 | Artifact | What it shows | Status |
