@@ -1,0 +1,226 @@
+{
+  "name": "Session5_Workshop_Registration",
+  "nodes": [
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "795edf8f-84ae-4024-8311-a9a1e771e4ec",
+              "name": "name",
+              "value": "={{ $json[\"Full Name\"].trim().toLowerCase().replace(/\\b\\w/g, c => c.toUpperCase()) }}",
+              "type": "string"
+            },
+            {
+              "id": "e4076c83-9836-4032-a3ba-cbd4a18cd194",
+              "name": "email",
+              "value": "={{ $json[\"Email\"].trim().toLowerCase() }}",
+              "type": "string"
+            },
+            {
+              "id": "50005880-c0e9-413e-a6cc-34050f2e7413",
+              "name": "email_valid",
+              "value": "={{ /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/.test($json[\"Email\"].trim()) }}",
+              "type": "boolean"
+            },
+            {
+              "id": "7d1356fc-dcdd-4120-9955-db4604d7a3a0",
+              "name": "phone",
+              "value": "={{ String($json[\"Phone\"] ?? \"\").replace(/\\D/g, \"\") }}",
+              "type": "string"
+            },
+            {
+              "id": "0773cfbc-7c4b-4924-8fb8-8045001a4aa5",
+              "name": "phone_missing",
+              "value": "={{ !$json[\"Phone\"] }}",
+              "type": "boolean"
+            },
+            {
+              "id": "b8e5258a-fe06-4f35-813d-6b293d557ab4",
+              "name": "phone_valid",
+              "value": "={{ String($json[\"Phone\"] ?? \"\").replace(/\\D/g, \"\").length === 10 }}",
+              "type": "boolean"
+            },
+            {
+              "id": "b903750a-65a0-48ec-ade5-583896175097",
+              "name": "city",
+              "value": "={{ $json[\"City\"].trim().toLowerCase().replace(/\\b\\w/g, c => c.toUpperCase()) }}",
+              "type": "string"
+            },
+            {
+              "id": "82fbc06a-5735-45e0-af40-c26d3eb2ecdc",
+              "name": "seats",
+              "value": "={{ Number($json[\"Seats\"]) || 0 }}",
+              "type": "number"
+            },
+            {
+              "id": "feb00330-8574-466d-a205-460a74bf58ad",
+              "name": "seats_needs_check",
+              "value": "={{ !Number($json[\"Seats\"]) }}",
+              "type": "boolean"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.5,
+      "position": [
+        448,
+        0
+      ],
+      "id": "66166475-7567-45c4-992c-c561bec9e386",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "84c6d4e9-6963-4594-9972-8a5b0a8d8f72",
+              "leftValue": "={{ $json.email_valid }}",
+              "rightValue": false,
+              "operator": {
+                "type": "boolean",
+                "operation": "true",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        672,
+        0
+      ],
+      "id": "47a7e82d-700a-4973-ab02-f0899a5a6372",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $json.email }}",
+        "subject": "You're registered: Weekend Cooking Workshop",
+        "emailType": "text",
+        "message": "=Hi {{ $json.name }},    You're confirmed for {{ $json.seats }} seat(s) at the Weekend Cooking Workshop in {{ $json.city }}.    See you there!",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.2,
+      "position": [
+        896,
+        -96
+      ],
+      "id": "1f13dd01-d2e9-4f92-be98-2c51b83c275b",
+      "name": "Send a message",
+      "webhookId": "c05637cb-3c0b-4c4e-ae1a-07dc9e7e5f1c",
+      "credentials": {
+        "gmailOAuth2": {
+          "id": "Zr4k3xuBaSAjoDwQ",
+          "name": "Gmail account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "pollTimes": {
+          "item": [
+            {
+              "mode": "everyMinute"
+            }
+          ]
+        },
+        "documentId": {
+          "__rl": true,
+          "value": "1DVDoW2vehFBdsc7l8iVJ7sjLBKfskoGNYzYlurNeHT8",
+          "mode": "list",
+          "cachedResultName": "Untitled form (Responses)",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DVDoW2vehFBdsc7l8iVJ7sjLBKfskoGNYzYlurNeHT8/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 877506231,
+          "mode": "list",
+          "cachedResultName": "Form Responses 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1DVDoW2vehFBdsc7l8iVJ7sjLBKfskoGNYzYlurNeHT8/edit#gid=877506231"
+        },
+        "event": "rowAdded",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "83509c30-42c9-4f5d-b8f2-233bc7be6db7",
+      "name": "Google Sheets Trigger",
+      "credentials": {
+        "googleSheetsTriggerOAuth2Api": {
+          "id": "qprCMLfD2X8mKRDC",
+          "name": "Google Sheets Trigger account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Send a message",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets Trigger": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "c9d48351-da21-46b5-9b8e-30046d28cd7f",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "e85b12aefe8afe0affc6ecd36b4cf76b35b15431e55e475d6466517ce1a4fb6d"
+  },
+  "nodeGroups": [],
+  "id": "bYd1iloqIhow389d",
+  "tags": []
+}
