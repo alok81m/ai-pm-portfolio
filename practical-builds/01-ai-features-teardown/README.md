@@ -29,6 +29,10 @@ My own phone: MakeMyTrip, CRED, WhatsApp, Amazon and Inshorts. The full map is i
 | Amazon | Rufus shopping assistant | GenAI (Agent once it acts) · Generate | Product catalogue via RAG + tool calls → comparison text + carousels | Rufus-assisted order rate vs no-Rufus A/B†| Return rate of Rufus orders not higher†|
 | Inshorts | Personalised news feed | Classic ML · Rank | Read/skip history, category tags → ranked 60-word cards | D7 retention ≥ 40%, rolling 4 weeks† | CTR on top 3 cards ≥ 25% |
 
+![Feature map as submitted in Google Sheets](images/feature-map-as-submitted.png)
+
+*The sheet as submitted. Rows 5 (Rufus) and 6 (Inshorts) had cells shifted right; the table above and the CSV are the corrected version.*
+
 † Completed after the tutor review: the window, exclusions and minimum data for each success metric, plus the Rufus guardrail and the missing cost-of-error cells for Rufus and Inshorts. Everything else is as submitted.
 
 ## 5. Results
@@ -56,6 +60,7 @@ My own phone: MakeMyTrip, CRED, WhatsApp, Amazon and Inshorts. The full map is i
 4. Next map: widen the range beyond chatbots, adding vision (Google Lens), number prediction (a delivery ETA) and a rules feature (UPI daily limit). The model-answer workbook below includes all three.
 
 ## Files
+- [`images/feature-map-as-submitted.png`](images/feature-map-as-submitted.png): the Google Sheet as submitted (rows 5–6 had shifted columns; the corrected map is in the CSV)
 - [`data/feature-map.csv`](data/feature-map.csv): my completed feature map († = completed after review)
 - [`data/PT1_Model_Answers.xlsx`](data/PT1_Model_Answers.xlsx): tutor model answers, a 7-question method for analysing any industry, an industry cheat-sheet and a metric-builder template
 
