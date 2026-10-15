@@ -18,7 +18,7 @@ Senior Product Manager building hands-on AI fluency: machine learning, Generativ
 
 | # | Build | Skill shown | Status |
 | --- | --- | --- | --- |
-| 01 | [AI features teardown](practical-builds/01-ai-features-teardown/) | Mapping AI to product value | Week 1 |
+| 01 | [AI features teardown](practical-builds/01-ai-features-teardown/) | Mapping AI to product value | ✅ Done (62/100) |
 | 02 | [Food-delivery support bot prompt pack](practical-builds/02-support-bot-prompts/) | Prompt engineering, test cases | Week 2 |
 | 03 | [Country development segmentation](practical-builds/03-country-segmentation/) | K-means, PCA | Week 3 |
 | 04 | [Streaming viewership drivers](practical-builds/04-viewership-regression/) | Regression, driver analysis | Week 4 |
